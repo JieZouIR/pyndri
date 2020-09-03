@@ -1,3 +1,22 @@
+This is forked from pyndri of Christophe Van Gysel, with three more features added: get document title, document url, and document text of each retrievaled result. Please follow the same guideline with pyndri repo of Christophe Van Gysel except for installing pyndri. Git clone this repo, cd to the root directory of the cloned repo, and then use "python setup.py install" to install pyndri.
+
+Example for new feature:
+
+    import pyndri
+
+    index = pyndri.Index('/path/to/indri/index')
+
+    # Queries the index with 'hello world' and returns the first 1000 results.
+    results = index.query('hello world', results_requested=1000, include_snippets=True)
+
+    for int_document_id, score, snippet in results:
+        ext_document_id, _ = index.document(int_document_id)
+        document_title=index.document_title(int_document_id)
+        document_url=index.document_url(int_document_id)
+        document_snippet=snippet
+        document_text=index.document_text(int_document_id)
+        print(ext_document_id, document_title, document_url, document_snippet, score)
+
 pyndri
 ======
 
@@ -33,7 +52,7 @@ To install Indri:
 
 Finally, install pyndri:
 
-    sudo pip3 install pyndri
+    python setup.py install #cd to the root directory of the cloned repo, and then use "python setup.py install" to install pyndri
 
 ### macOS
 
@@ -54,7 +73,7 @@ To install Indri:
 
 Finally, install pyndri:
 
-    sudo pip install pyndri
+    python setup.py install #cd to the root directory of the cloned repo, and then use "python setup.py install" to install pyndri
 
 Toolkit examples
 ----------------
