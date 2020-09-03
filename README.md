@@ -1,4 +1,4 @@
-This is forked from pyndri of Christophe Van Gysel, with three more features added: get document title, document url, and document text of each retrievaled result. Please follow the same guideline with pyndri repo of Christophe Van Gysel except for installing pyndri. Git clone this repo, cd to the root directory of the cloned repo, and then use "python setup.py install" to install pyndri.
+This is forked from pyndri of Christophe Van Gysel, with three more features added: get document title, document url, and document text of each retrievaled result. Please follow the same guideline with pyndri repo of Christophe Van Gysel except for installing pyndri. Git clone this repo, cd to the root directory of the cloned repo, and then use "python setup.py install" to install pyndri. If indri is installed locally, you'll need to update the enviroment variable: CPATH, LD_LIBRARY_PATH and export INDRI_INCLUDE_PATH which is set to the location of header files in the indri installation directory.
 
 Example for new feature:
 
